@@ -17,16 +17,26 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="age" placeholder="Age (Years)" required="required" />
-        <input type="text" name="time_in_hospital" placeholder="Time in hospital (days)" required="required" />
-	<input type="text" name="num_lab_procedures" placeholder="No. of lab procedures" required="required" />
-	<input type="text" name="num_procedures" placeholder="No. of procedures" required="required" />
-	<input type="text" name="num_medications" placeholder="No. of medications" required="required" />
-	<input type="text" name="number_diagnoses" placeholder="No. of diagnoses" required="required" />
-	<input type="text" name="metformin" placeholder="Metformin (Yes=1, No=0)" required="required" />
-	<input type="text" name="insulin" placeholder="Insulin (Yes=1, No=0)" required="required" />
-	<input type="text" name="preceding_year_visits" placeholder="No. of Preceding Year Visits" required="required" />
-	<input type="text" name="discharge_disposition_id_Transferred_to_another_medical_facility" placeholder="Transferred to another medical facility (Yes=1, No=0)" required="required" />
+    	<input type="text" name="age" placeholder="Age (Years)" size="50" required="required" />
+	<div class="break"></div>
+        <input type="text" name="time_in_hospital" placeholder="Time in hospital (days)" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="num_lab_procedures" placeholder="No. of lab procedures" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="num_procedures" placeholder="No. of procedures" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="num_medications" placeholder="No. of medications" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="number_diagnoses" placeholder="No. of diagnoses" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="metformin" placeholder="Metformin (Not Given= -2, Down= -1, Steady = 0, Up= 1)" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="insulin" placeholder="Insulin (Not Given= -2, Down= -1, Steady = 0, Up= 1)" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="preceding_year_visits" placeholder="No. of Preceding Year Visits" size="50" required="required" />
+	<div class="break"></div>
+	<input type="text" name="discharge_disposition_id_Transferred_to_another_medical_facility" placeholder="Transferred to another medical facility? (Yes=1, No=0)" size="50" required="required" />
+	<div class="break"></div>
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
